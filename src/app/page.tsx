@@ -6,20 +6,21 @@ import Stories from '@/components/Stories'
 import VirtualTour from '@/components/VirtualTour'
 import Quiz from '@/components/Quiz'
 import ForceComparison from '@/components/ForceComparison'
+import Casualties from '@/components/Casualties'
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       <Hero />
-
-      <Timeline />
       <ForceComparison />
+      <Timeline />
       <InteractiveMap />
+      <Casualties />
+
       <Gallery />
       <Stories />
       <VirtualTour />
       <Quiz />
-
     </main>
   )
 }
