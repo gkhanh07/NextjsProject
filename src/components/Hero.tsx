@@ -20,9 +20,9 @@ export default function Hero() {
                     mọi tính toán điên cuồng đó đều bị đảo lộn hoàn toàn. Quân và dân Thủ đô Hà Nội,
                     thành phố Hải Phòng và miền Bắc đã làm nên một chiến công vô cùng chói lọi!
                 </p>
-                <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg transition-colors text-lg font-semibold">
+                {/* <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg transition-colors text-lg font-semibold">
                     Khám Phá Chiến Thắng Lịch Sử
-                </button>
+                </button> */}
             </div>
         </section>
     )
