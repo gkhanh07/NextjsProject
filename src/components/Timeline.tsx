@@ -1,6 +1,8 @@
 "use client"
 
+import { EyeClosed, EyeIcon } from 'lucide-react'
 import { useState } from 'react'
+
 
 const timelineData = [
     {
@@ -30,7 +32,8 @@ const timelineData = [
             '19 giờ 10 phút, ngày 18/12/1972, Đại đội ra-đa 16 phát hiện nhiễu B-52.',
 
             '19 giờ 15 phút, ngày 18/12/1972, Trung đoàn 291 phát hiện B-52 và báo cáo: "B-52 đang vào miền bắc".'
-        ]
+        ],
+        image: 'https://file3.qdnd.vn/data/images/0/2021/12/08/duyhoan_kh/don-vi-phao-cao-xa-bao-ve-thu-do.gif?dpi=150&quality=100&w=870'
     },
     {
         date: '19-22/12/1972',
@@ -52,7 +55,8 @@ const timelineData = [
             '• Phát huy khí thế chiến thắng của 3 ngày trước, quân và dân ta đã bắn rơi 11 máy bay, trong đó có 3 chiếc B-52; 2 chiếc F-4; 2 chiếc A-7; 1 chiếc F-111; 1 chiếc A-6; 1 chiếc RA-50; 1 chiếc F-105.',
 
             '• Ngày 22/12/1972, ban ngày, địch sử dụng 56 lần chiếc máy bay chiến thuật đánh phá các mục tiêu quanh Hà Nội; ban đêm, địch sử dụng 24 lần chiếc B-52 và 30 máy bay chiến thuật hộ tống, cùng 9 máy bay F-111 đánh các mục tiêu tại Hà Nội, Hải Phòng, Bắc Ninh... Chúng dội bom xuống Bệnh viện Bạch Mai - bệnh viện lớn nhất miền Bắc.'
-        ]
+        ],
+        image: 'https://file3.qdnd.vn/data/images/0/2021/12/08/duyhoan_kh/xac-may-bay-b-52-bi-ban-roi.gif?dpi=150&quality=100&w=870'
     },
     {
         date: '23-26/12/1972',
@@ -70,7 +74,8 @@ const timelineData = [
             '• Ngày 26/12/1972, từ 13 giờ 00 đến tối, địch sử dụng 56 lần chiếc máy bay cường kích các loại ném bom dữ dội các khu vực trận địa tên lửa và trạm biến thế Đông Anh.',
 
             '• Từ 22 giờ 05 phút đến 23 giờ 20 phút, địch sử dụng 105 lần chiếc B-52 và 110 lần chiếc máy bay chiến thuật hộ tống đánh phá ồ ạt, liên tục vào nhiều mục tiêu khu vực Hà Nội, Hải Phòng, Thái Nguyên, ném bom rải thảm dữ dội tàn phá tất cả các mục tiêu nội, ngoại thành Hà Nội, đặc biệt là khu phố Khâm Thiên và khu phố Hai Bà Trưng, Hà Nội.'
-        ]
+        ],
+        image: 'https://special.nhandan.vn/50namkyuckhamthien/assets/0kWKZeg3qd/ttxvn_pho_kham_thien-620x378.jpg'
     },
     {
         date: '27-28/12/1972',
@@ -84,7 +89,8 @@ const timelineData = [
             '• Ngày 28/12/1972, ban ngày địch huy động 131 lần chiếc máy bay chiến thuật; ban đêm, địch sử dụng khoảng 60 lần chiếc B-52 đánh vào các mục tiêu ở khu vực nội, ngoại thành Hà Nội.',
 
             '• Quân và dân ta tiếp tục chiến đấu dũng cảm, bắn rơi 3 máy bay, trong đó có 2 chiếc B-52 (1 chiếc do phi công Vũ Xuân Thiều lái chiếc máy bay MiG-21 tiêu diệt và đã anh dũng hy sinh); 1 chiếc RA-5C.'
-        ]
+        ],
+        image: 'https://vnanet.vn/Data/Articles/2021/12/17/5826097/vna_potal__chien_thang_%E2%80%9Cha_noi_-_dien_bien_phu_tren_khong%E2%80%9D_mai_mai_la_bieu_tuong_cua_ban_linh_va_tri_tue_con_nguoi_viet_nam_stand.jpg'
     },
     {
         date: '29-30/12/1972',
@@ -102,26 +108,35 @@ const timelineData = [
             '• Tổng kết 12 ngày đêm, quân và dân miền Bắc đã bắn rơi 81 máy bay các loại, trong đó có 34 máy bay B-52, bắt sống 43 giặc lái Mỹ.',
 
             '• Chiến thắng "Điện Biên Phủ trên không" đã buộc Mỹ phải ký Hiệp định Paris về chấm dứt chiến tranh, lập lại hòa bình ở Việt Nam (ngày 27/01/1973).'
-        ]
+        ],
+        image: 'https://cdn.tuoitrethudo.vn/stores/news_dataimages/tuoitrethudocomvn/122017/06/16/gia-tri-lich-su-cua-chien-thang-dien-bien-phu-tren-khong-23-.8428.jpg'
     }
 ]
-
 export default function Timeline() {
     const [activeDay, setActiveDay] = useState(0)
+    const [showText, setShowText] = useState(true)
     const validActiveDay = Math.min(activeDay, timelineData.length - 1)
 
     return (
         <section
             className="py-12 relative min-h-screen"
             style={{
-                backgroundImage: `url('https://special.nhandan.vn/HaNoi_DienBienPhutrenkhong_12ngaydem/assets/s3mB04lM60/tieu-doan-ten-lua-x-ttxvn-1920x1079.jpg')`,
+                backgroundImage: `url('${timelineData[validActiveDay].image}')`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundAttachment: 'fixed'
             }}
         >
+
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/60" />
+            <button
+                onClick={() => setShowText(prev => !prev)}
+                className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded 
+                        disabled:opacity-50 hover:bg-white/20 transition border border-white/30 top-[160px] left-0 absolute z-20 transform -translate-y-1/2"
+            >
+                {showText ? <EyeIcon></EyeIcon> : <EyeClosed></EyeClosed>}
+            </button>
 
             {/* Content */}
             <div className="relative z-10 max-w-6xl mx-auto px-4 text-white">
@@ -130,26 +145,35 @@ export default function Timeline() {
                     Diễn Biến 12 Ngày Đêm
                 </h2>
 
-                <div className="flex justify-between mb-12">
+                {showText && (<div className="flex justify-between mb-12">
                     <button
-                        onClick={() => setActiveDay(prev => Math.max(0, prev - 1))}
+                        onClick={() => {
+                            setActiveDay(prev => Math.max(0, prev - 1))
+                            setShowText(true)
+                        }}
                         disabled={activeDay === 0}
                         className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded 
                         disabled:opacity-50 hover:bg-white/20 transition border border-white/30"
                     >
                         Ngày trước
                     </button>
+
                     <button
-                        onClick={() => setActiveDay(prev => Math.min(timelineData.length - 1, prev + 1))}
+                        onClick={() => {
+                            setActiveDay(prev => Math.min(timelineData.length - 1, prev + 1))
+                            setShowText(true)
+
+                        }}
                         disabled={activeDay === timelineData.length - 1}
                         className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded 
                         disabled:opacity-50 hover:bg-white/20 transition border border-white/30"
                     >
                         Ngày sau
                     </button>
-                </div>
+                </div>)}
 
-                {timelineData[validActiveDay] && (
+
+                {showText && timelineData[validActiveDay] && (
                     <div className="space-y-8">
                         <div className="flex flex-col items-center text-center space-y-4">
                             <div className="text-6xl font-bold text-white">
@@ -176,4 +200,4 @@ export default function Timeline() {
             </div>
         </section>
     )
-} 
+}

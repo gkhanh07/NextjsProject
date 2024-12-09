@@ -45,7 +45,7 @@ export default function Stories() {
                                     />
                                 </div>
                                 <div>
-                                    <h3 className="font-bold">{story.name}</h3>
+                                    <h3 className="font-bold text-black">{story.name}</h3>
                                     <p className="text-gray-600">{story.role}</p>
                                 </div>
                             </div>

@@ -20,14 +20,14 @@ export default function Gallery() {
     return (
         <section className="py-20 bg-slate-100">
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold text-center mb-12">
+                <h2 className="text-4xl font-bold text-center mb-12 text-black">
                     Thư Viện Tư Liệu
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {mediaItems.map((item, index) => (
                         <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg p-6">
-                            <h3 className="font-bold text-2xl mb-2">
+                            <h3 className="font-bold text-2xl mb-2 text-black" >
                                 {item.title}
                             </h3>
                             <p className="text-gray-600 text-lg">

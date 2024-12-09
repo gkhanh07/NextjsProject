@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const DienBienPhuMeaning: FC = () => {
     return (
-        <section className="py-12 bg-gray-100 min-h-screen">
+        <section className="py-12 bg-gray-100 min-h-screen text-black">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-bold text-center mb-12">
                     Ý Nghĩa Trận 12 Ngày Đêm trên Không Điện Biên Phủ
