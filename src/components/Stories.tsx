@@ -16,8 +16,13 @@ const stories = [
         role: 'Anh Hùng',
         story: 'Anh hùng Lực lượng vũ trang nhân dân Phạm Tuân, phi công Việt Nam đầu tiên bắn rơi B52 Mỹ trên bầu trời Hà Nội',
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsdCDnLFFZMb82mShAIyTLUYfoqNauiRK67w&s'
+    },
+    {
+        name: 'Thiếu tướng Trần Việt',
+        role: 'Anh hùng Lực lượng vũ trang nhân dân',
+        story: '"Từ góc độ cá nhân, tôi khẳng định, Chiến dịch Điện Biên Phủ trên không thắng lợi chính là minh chứng hùng hồn cho sức mạnh đoàn kết của dân tộc, nghệ thuật quân sự tài tình, khẳng định tầm chiến lược của Đảng, của Bác Hồ."',
+        image: 'https://file3.qdnd.vn/data/images/0/2022/12/26/vuhuyen/17.jpg?dpi=150&quality=100&w=870'
     }
-
 ]
 
 export default function Stories() {
@@ -25,7 +30,7 @@ export default function Stories() {
         <section className="py-20">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-center mb-12">
-                    Câu Chuyện Nhân Chứng
+                    Các anh hùng lịch sử
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

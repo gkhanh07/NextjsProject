@@ -7,6 +7,7 @@ import VirtualTour from '@/components/VirtualTour'
 import Quiz from '@/components/Quiz'
 import ForceComparison from '@/components/ForceComparison'
 import Casualties from '@/components/Casualties'
+import Meaning from '@/components/Meaning'
 
 export default function Home() {
   return (
@@ -14,13 +15,14 @@ export default function Home() {
       <Hero />
       <ForceComparison />
       <Timeline />
-      <InteractiveMap />
+
       <Casualties />
 
       <Gallery />
       <Stories />
-      <VirtualTour />
-      <Quiz />
+
+
+      <Meaning />
     </main>
   )
 }

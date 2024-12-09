@@ -126,7 +126,7 @@ export default function Timeline() {
             {/* Content */}
             <div className="relative z-10 max-w-6xl mx-auto px-4 text-white">
                 {/* Tiêu đề chính */}
-                <h2 className="text-5xl font-bold text-center mb-16">
+                <h2 className="text-10xl font-bold text-center mb-16">
                     Diễn Biến 12 Ngày Đêm
                 </h2>
 
@@ -152,21 +152,23 @@ export default function Timeline() {
                 {timelineData[validActiveDay] && (
                     <div className="space-y-8">
                         <div className="flex flex-col items-center text-center space-y-4">
-                            <div className="text-4xl font-bold text-white">
+                            <div className="text-6xl font-bold text-white">
                                 {timelineData[validActiveDay].date}
                             </div>
-                            <div className="text-3xl font-semibold text-white/90">
+                            <div className="text-5xl font-semibold text-white/90">
                                 {timelineData[validActiveDay].title}
                             </div>
                         </div>
 
-                        <p className="text-xl text-white/80 text-center max-w-3xl mx-auto">
+                        <p className="text-3xl text-white/80 text-center max-w-3xl mx-auto">
                             {timelineData[validActiveDay].content}
                         </p>
 
-                        <div className="text-lg text-white/80 max-w-4xl mx-auto leading-loose space-y-8">
+                        <div className="text-xl text-white/80 max-w-4xl mx-auto leading-loose space-y-8">
                             {timelineData[validActiveDay].details.map((detail, index) => (
-                                <p key={index}>{detail}</p>
+                                <p key={index} className="text-xl">
+                                    {detail}
+                                </p>
                             ))}
                         </div>
                     </div>
